@@ -19,13 +19,24 @@ html {
     --primary: #dc4f72;
     --title-color: #2C3038;
     --text-color: #5a5a5a;
+    --light-bg-color: #F7F9FC;
+    --card-curve: 6px;
+    --border-color: #eee;
 }
 
 /*============  End of Global  =============*/
-
 /*=============================================
 =                   General                   =
 =============================================*/
+.general {
+    background-color: var(--light-bg-color);
+    padding-top: 3rem;
+    padding-bottom: 3rem;
+}
+
+.general__title {
+    text-align: center;
+}
 
 .general__title h3 {
     font-size: 16px;
@@ -46,6 +57,83 @@ html {
     color: var(--text-color);
     font-size: 16px;
     line-height: 22.5px;
+    font-weight: 25rem;
+}
+
+.general__image {
+    position: sticky;
+    top: 80px;
+}
+
+.general__image img {
+    border-radius: var(--card-curve);
+}
+
+.general__content__col--edit {
+    margin-top: 3rem;
+}
+
+.general__list ul {
+    list-style-type: none;
+}
+
+.general__list input[type="checkbox"] {
+    display: none;
+}
+
+.general__list ul li {
+    margin-bottom: 15px;
+}
+
+.general__list ul li label {
+    display: block;
+    width: 100%;
+    height: 100%;
+    padding: 25px 50px 25px 20px;
+}
+
+.general .card {
+    border-color: var(--border-color);
+    border-radius: var(--card-curve);
+}
+
+.general i {
+    position: absolute;
+    top: 20px;
+    right: 25px;
+}
+
+.general i::after {
+    content: '';
+    display: block;
+    background-color: var(--title-color);
+    width: 3px;
+    height: 9px;
+    transform: rotate(45deg);
+}
+
+.general i::before {
+    content: '';
+    display: block;
+    background-color: var(--title-color);
+    width: 3px;
+    height: 9px;
+    transform: translate(-5px, 9px) rotate(135deg)
+}
+
+.general__list__title {
+    font-size: 18px;
+    line-height: 30px;
+    display: block;
+    color: var(--title-color);
+}
+
+.general__list__content {
+    display: none;
+}
+
+.general__list input:checked+label .general__list__content {
+    display: block;
 }
 
 /*============  End of General  =============*/
