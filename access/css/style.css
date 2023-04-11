@@ -9,5 +9,5 @@ body, html{
     background-color: var(--bgr_color);
 }
 :root{
-    bgr_color: #fff;
+    --bgr_color: #fff;
 }
