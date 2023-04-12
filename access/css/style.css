@@ -67,6 +67,7 @@ html {
 
 .general__image img {
     border-radius: var(--card-curve);
+    box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15);
 }
 
 .general__content__col--edit {
@@ -83,6 +84,7 @@ html {
 
 .general__list ul li {
     margin-bottom: 15px;
+    overflow: hidden;
 }
 
 .general__list ul li label {
@@ -90,6 +92,7 @@ html {
     width: 100%;
     height: 100%;
     padding: 25px 50px 25px 20px;
+    margin-bottom: 0;
 }
 
 .general .card {
@@ -110,6 +113,7 @@ html {
     width: 3px;
     height: 9px;
     transform: rotate(45deg);
+    transition: .3s;
 }
 
 .general i::before {
@@ -118,22 +122,58 @@ html {
     background-color: var(--title-color);
     width: 3px;
     height: 9px;
-    transform: translate(-5px, 9px) rotate(135deg)
+    transform: translate(-5px, 9px) rotate(135deg);
+    transition: .3s;
 }
 
-.general__list__title {
+.general__list__header {
     font-size: 18px;
     line-height: 30px;
     display: block;
     color: var(--title-color);
 }
 
-.general__list__content {
-    display: none;
+.general__list__text {
+    color: var(--text-color);
+    font-size: 16px;
+    line-height: 24.5px;
+    opacity: 0;
+    transform: translateY(50px);
+    max-height: 0;
+    transition: .3s;
 }
 
-.general__list input:checked+label .general__list__content {
-    display: block;
+.general__list input:checked+label .general__list__text {
+    opacity: 1;
+    transform: translateY(0);
+    max-height: none;
+    margin-top: 14px;
+}
+
+.general__list input:checked+label i::before {
+    transform: translate(0, 9px) rotate(135deg)
+}
+
+.general__list input:checked+label i::after {
+    transform: translate(-4px, 0) rotate(45deg);
 }
 
 /*============  End of General  =============*/
+/*=============================================
+=                   Responsive                   =
+=============================================*/
+@media (min-width: 576px) {}
+
+@media (min-width: 768px) {
+    .general__content__col--edit:last-child {
+        padding-left: 3rem;
+    }
+}
+
+@media (min-width: 992px) {}
+
+@media (min-width: 1200px) {}
+
+@media (min-width: 1400px) {}
+
+/*============  End of Responsive  =============*/
