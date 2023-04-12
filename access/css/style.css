@@ -24,21 +24,11 @@ html {
     --border-color: #eee;
 }
 
-/*============  End of Global  =============*/
-/*=============================================
-=                   General                   =
-=============================================*/
-.general {
-    background-color: var(--light-bg-color);
-    padding-top: 3rem;
-    padding-bottom: 3rem;
-}
-
-.general__title {
+.__title {
     text-align: center;
 }
 
-.general__title h3 {
+.__title h3 {
     font-size: 16px;
     line-height: 20px;
     font-weight: 700;
@@ -47,17 +37,28 @@ html {
     margin-bottom: 5px;
 }
 
-.general__title h2 {
+.__title h2 {
     font-size: 32px;
     line-height: 42px;
     color: var(--title-color);
+    font-weight: 700;
 }
 
-.general__title p {
+.__title p {
     color: var(--text-color);
     font-size: 16px;
     line-height: 22.5px;
-    font-weight: 25rem;
+    font-weight: 400;
+}
+
+/*============  End of Global  =============*/
+/*=============================================
+=                   General                   =
+=============================================*/
+.general {
+    background-color: var(--light-bg-color);
+    padding-top: 3rem;
+    padding-bottom: 3rem;
 }
 
 .general__image {
@@ -160,13 +161,82 @@ html {
 
 /*============  End of General  =============*/
 /*=============================================
+=                   Feature                   =
+=============================================*/
+.featured {
+    padding: 3rem 0;
+    margin-bottom: 1.5rem;
+}
+
+.featured__title {
+    text-align: center;
+}
+
+.featured__title h3 {
+    font-size: 16px;
+    line-height: 20px;
+    font-weight: 700;
+    color: var(--primary);
+    text-transform: uppercase;
+    margin-bottom: 5px;
+}
+
+.featured__title h2 {
+    font-size: 32px;
+    line-height: 42px;
+    font-weight: 700;
+}
+
+.featured__content {
+    margin-top: 3rem;
+}
+
+.featured__content input[type="radio"] {
+    display: none;
+}
+
+.featured__content label {
+    display: block;
+}
+
+.featured__content .featured__tabs div {
+    max-height: 0;
+    overflow: hidden;
+}
+
+.featured__tabs input:checked+label+div {
+    max-height: none;
+}
+
+/*============  End of Feature  =============*/
+/*=============================================
 =                   Responsive                   =
 =============================================*/
 @media (min-width: 576px) {}
 
+@media (min-width: 576px) and (max-width: 667px) {
+    .__title h2 {
+        font-size: 32px;
+        line-height: 42px;
+    }
+}
+
+@media (min-width: 668px) and (max-width: 800px) {
+    .__title h2 {
+        font-size: 40px;
+        line-height: 50px;
+    }
+}
+
 @media (min-width: 768px) {
     .general__content__col--edit:last-child {
         padding-left: 3rem;
+    }
+}
+
+@media (min-width: 801px) {
+    .__title h2 {
+        font-size: 46px;
     }
 }
 
