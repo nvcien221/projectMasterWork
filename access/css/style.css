@@ -22,6 +22,7 @@ html {
     --light-bg-color: #F7F9FC;
     --card-curve: 6px;
     --border-color: #eee;
+    --border-color-light: ##f8f9fa;
 }
 
 .__title {
@@ -199,13 +200,123 @@ html {
     display: block;
 }
 
-.featured__content .featured__tabs div {
-    max-height: 0;
+.featured__tabs {
+    border: 1px solid #c1c1c1;
+}
+
+.featured__content .featured__tabs input+label+div {
     overflow: hidden;
+    max-height: 0px;
+    transition-property: max-height, margin;
+    transition-duration: .5s;
+    padding-left: 15px;
+    padding-right: 15px;
+}
+
+.featured__tabs input:checked+label {
+    border-bottom: 3px solid var(--primary);
+}
+
+.featured__tabs input:checked+label p {
+    color: var(--primary);
+}
+
+.featured__tabs input:checked+label span {
+    border-left: 6px solid transparent;
+    border-right: 6px solid transparent;
+    border-bottom: 12px solid #9B9797;
+    border-top: none;
 }
 
 .featured__tabs input:checked+label+div {
-    max-height: none;
+    margin: 20px 0;
+    max-height: 1000px;
+}
+
+.featured__tabs input+label div p {
+    font-weight: 600;
+    font-size: 20px;
+    margin: 0;
+    transition: .2s;
+}
+
+.featured__tabs input+label div span {
+    width: 0;
+    height: 0;
+    border-left: 6px solid transparent;
+    border-right: 6px solid transparent;
+    border-top: 12px solid #c1c1c1;
+}
+
+.featured .featured__tab-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.featured__content .featured__tabs input+label+div h2 {
+    font-size: 24px;
+    line-height: 30px;
+    margin-bottom: 14px;
+    font-weight: 700;
+    color: var(--title-color)
+}
+
+.featured__content .featured__tabs input+label+div p {
+    color: var(--text-color);
+    margin-bottom: 16px;
+    font-size: 16px;
+    line-height: 24.5px;
+}
+
+.featured__content .featured__tabs div .theme-button {
+    color: #dc4f72;
+    border-color: #dc4f72;
+    font-weight: 700;
+    font-size: 14px;
+    text-transform: uppercase;
+    line-height: 44px;
+    padding: 0px 20px;
+    margin-top: 1rem;
+}
+
+.featured__content .featured__tabs div .btn-outline-primary:not(:disabled):not(.disabled).active,
+.btn-outline-primary:not(:disabled):not(.disabled):active,
+.show>.btn-outline-primary.dropdown-toggle {
+    color: #fff;
+    background-color: #dc4f72;
+    border-color: #dc4f72;
+}
+
+.featured__content .featured__tabs div .btn-outline-primary:not(:disabled):not(.disabled).active:focus,
+.btn-outline-primary:not(:disabled):not(.disabled):active:focus,
+.show>.btn-outline-primary.dropdown-toggle:focus {
+    box-shadow: 0 0 0 0.2rem rgba(220, 79, 114, 0.5);
+    color: white;
+}
+
+.featured__content .featured__tabs div .btn-outline-primary:hover {
+    background-color: #dc4f72;
+    color: white;
+}
+
+.featured__content .featured__tabs div .btn-outline-primary:focus {
+    box-shadow: 0 0 0 0.2rem rgba(220, 79, 114, 0.5);
+    color: white;
+}
+
+.featured__content .featured__tabs div img {
+    border-radius: var(--card-curve);
+    margin-top: 3rem;
+}
+
+.featured .featured__tabs label {
+    margin-bottom: 0;
+    padding-top: 10px;
+    padding-right: 15px;
+    padding-left: 15px;
+    padding-bottom: 10px;
+    border-bottom: 1px solid rgb(193, 193, 193);
 }
 
 /*============  End of Feature  =============*/
