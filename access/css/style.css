@@ -52,6 +52,14 @@ html {
     font-weight: 400;
 }
 
+.container {
+    width: 100%;
+    padding-right: 15px;
+    padding-left: 15px;
+    margin-right: auto;
+    margin-left: auto;
+}
+
 /*============  End of Global  =============*/
 /*=============================================
 =                   General                   =
@@ -209,8 +217,6 @@ html {
     max-height: 0px;
     transition-property: max-height, margin;
     transition-duration: .5s;
-    padding-left: 15px;
-    padding-right: 15px;
 }
 
 .featured__tabs input:checked+label {
@@ -319,11 +325,23 @@ html {
     border-bottom: 1px solid rgb(193, 193, 193);
 }
 
+.featured .featured__tabs>div:nth-of-type(2) img {
+    margin-top: 0;
+}
+
 /*============  End of Feature  =============*/
 /*=============================================
 =                   Responsive                   =
 =============================================*/
-@media (min-width: 576px) {}
+@media (min-width: 576px) {
+    .container {
+        max-width: 100%;
+        padding-right: 30px;
+        padding-left: 30px;
+        margin-right: auto;
+        margin-left: auto;
+    }
+}
 
 @media (min-width: 576px) and (max-width: 667px) {
     .__title h2 {
@@ -340,9 +358,69 @@ html {
 }
 
 @media (min-width: 768px) {
+
+    /*=============================================
+    =                   General                   =
+    =============================================*/
     .general__content__col--edit:last-child {
         padding-left: 3rem;
     }
+
+    /*============  End of General  =============*/
+    /*=============================================
+    =                   Featured                   =
+    =============================================*/
+    
+
+    .featured .featured__tabs{
+        position: relative;
+        border: none;
+    }
+
+    .featured .featured__tabs label {
+        width: 33.33333333333%;
+        position: absolute;
+        border-bottom: 3px solid rgb(193, 193, 193);
+    }
+
+    .featured .featured__tabs>label:nth-of-type(2) {
+        top: 0;
+        left: 33.33333333333%;
+    }
+
+    .featured .featured__tabs>label:nth-of-type(3) {
+        top: 0;
+        right: 0;
+    }
+
+    .featured .featured__tabs label span {
+        display: none;
+    }
+
+    .featured .featured__tabs label .featured__tab-header > p{
+        font-weight: 700;
+        font-size: 22px;
+    }
+
+    .featured .featured__tabs label .featured__tab-header {
+        justify-content: center;
+    }
+
+    .featured__tab-item--edit {
+        margin-top: 88px;
+    }
+
+    .featured__content .featured__tabs input+label+div {
+        transition: none;
+    }
+
+    .featured__content .featured__tabs input+label+div img {
+        margin-top: 0;
+    }
+
+
+
+    /*============  End of Featured  =============*/
 }
 
 @media (min-width: 801px) {
