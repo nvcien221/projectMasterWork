@@ -27,6 +27,8 @@ html {
 
 .__title {
     text-align: center;
+    max-width: 750px;
+    margin: 0 auto;
 }
 
 .__title h3 {
@@ -330,6 +332,14 @@ html {
 }
 
 /*============  End of Feature  =============*/
+
+/*=============================================
+=                   Feedback                   =
+=============================================*/
+
+
+
+/*============  End of Feedback  =============*/
 /*=============================================
 =                   Responsive                   =
 =============================================*/
@@ -370,9 +380,7 @@ html {
     /*=============================================
     =                   Featured                   =
     =============================================*/
-    
-
-    .featured .featured__tabs{
+    .featured .featured__tabs {
         position: relative;
         border: none;
     }
@@ -397,7 +405,7 @@ html {
         display: none;
     }
 
-    .featured .featured__tabs label .featured__tab-header > p{
+    .featured .featured__tabs label .featured__tab-header>p {
         font-weight: 700;
         font-size: 22px;
     }
@@ -418,8 +426,6 @@ html {
         margin-top: 0;
     }
 
-
-
     /*============  End of Featured  =============*/
 }
 
@@ -429,9 +435,38 @@ html {
     }
 }
 
-@media (min-width: 992px) {}
+@media (min-width: 992px) {
+
+    /*=============================================
+    =                   Feature                   =
+    =============================================*/
+    .featured__content {
+        max-width: 83.33333333333%;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    /*============  End of Feature  =============*/
+}
 
 @media (min-width: 1200px) {}
+
+@media (min-width: 1280px) {
+    .container {
+        max-width: 1200px;
+    }
+
+    /*=============================================
+    =                   Feature                   =
+    =============================================*/
+    .featured__content {
+        max-width: 83.33333333333%;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    /*============  End of Feature  =============*/
+}
 
 @media (min-width: 1400px) {}
 
