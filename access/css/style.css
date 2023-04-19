@@ -1,4 +1,4 @@
-
+@import url(./nhutGlobal.css);
 
 
 @import url(./variable.css);
@@ -21,7 +21,7 @@
     /* ABOUT  */
 @import url(./about.css);
 
-@import url(./nhutGlobal.css);
+
 @import url(./general.css);
 @import url(./feature.css);
 @import url(./feedback.css);

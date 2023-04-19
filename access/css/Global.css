@@ -20,6 +20,9 @@ html {
     --card-curve: 6px;
     --border-color: #eee;
     --border-color-light: ##f8f9fa;
+
+    --card-box-shadow: 1px 5px 7.5px rgba(14, 13, 13, 0.2);
+    --card-hover-box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.09);
 }
 
 .__title {

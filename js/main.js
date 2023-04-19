@@ -1,5 +1,15 @@
-
 // check
+document.getElementById("showOverlay").addEventListener("click", function () {
+    document.getElementById("search").classList.add("show");
+})
+document.getElementById("close").addEventListener("click", function () {
+    document.getElementById("search").classList.remove("show");
+})
+
+
+/**
+ * Công Nhựt
+ */
 var checkedRadio;
 var allRadios = document.getElementsByName('projects');
 /**
@@ -30,18 +40,12 @@ function removeEventClickForFeatured() {
     for (x = 0; x < allRadios.length; x++) {
         allRadios[x].onclick = function () { };
     }
-
     if (checkedRadio != undefined) {
         checkedRadio.checked = true;
     } else {
         allRadios[0].checked = true;
     }
-
 }
-
-
-
-
 function toggleFunction(x) {
     if (x.matches) {
         addEventClickForFeatured();
@@ -52,15 +56,3 @@ function toggleFunction(x) {
 var x = window.matchMedia("(max-width: 768px)")
 toggleFunction(x) // Call listener function at run time
 x.addListener(toggleFunction)
-
-
-
-
- document.getElementById("showOverlay").addEventListener("click", function(){
-    document.getElementById("search").classList.add("show");
- })
-
- document.getElementById("close").addEventListener("click", function(){
-    document.getElementById("search").classList.remove("show");
- })
-
