@@ -2,7 +2,7 @@
 .main-header{
     height: auto;
     padding: 15px 0;
-    background-color: var(--bg-color);
+    background-color: var(--bgr-color);
     padding: 0px;
     transition: all 0.4s ease 0s;
     display: grid;
