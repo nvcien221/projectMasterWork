@@ -1,13 +1,21 @@
-*{
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
-body, html{
-    font-family: 'Nunito', sans-serif;
-    line-height: 1.15;
-    background-color: var(--bgr_color);
-}
-:root{
-    bgr_color: #fff;
-}
+
+
+@import url(./variable.css);
+
+@import url(./reset.css);
+
+
+    /* Header  */
+@import url(./header.css);
+
+
+    /* CAROUSEL  */
+@import url(./carousel.css);
+
+
+    /* SUPPORT  */
+@import url(./support.css);
+
+
+    /* ABOUT  */
+@import url(./about.css);

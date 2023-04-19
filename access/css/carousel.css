@@ -1,0 +1,48 @@
+.carousel{
+    margin-top: 70px;
+}
+@media (min-width: 1280px){
+.container {
+    max-width: 1200px;
+    }
+}
+@media (min-width:992px){
+    .carousel{
+        margin-top: 90px;
+    }
+}
+.box-carousel{
+    position: relative;
+    z-index: 1;
+    background: linear-gradient(to right, var(--bg-color), rgba(255, 255, 255, 0.92)), url(../image/banner.jpg);
+    overflow: hidden;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    background-attachment: fixed;
+    display: grid;
+    align-items: center;
+    padding-top: 5rem;
+}
+
+.box-carousel .crs-contentText h3{
+    font-size: 50px;
+    line-height: 58px;
+    font-weight: 700;
+    color: var(--title-color);
+}
+.box-carousel .crs-contentText p{
+    font-size: 20px;
+    color: var(--text-color);
+    line-height: 28px;
+    font-weight: 400;
+    max-width: 450px;
+    margin: 1rem 0 1.5rem;
+}
+.crs-contentImg{
+    margin-top: 3rem;
+}
+.box-carousel .crs-contentImg .crs-img{
+    max-width: 100%;
+    height: auto;
+}
