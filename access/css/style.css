@@ -1,3 +1,26 @@
+
+
+
+@import url(./variable.css);
+
+@import url(./reset.css);
+
+
+    /* Header  */
+@import url(./header.css);
+
+
+    /* CAROUSEL  */
+@import url(./carousel.css);
+
+
+    /* SUPPORT  */
+@import url(./support.css);
+
+
+    /* ABOUT  */
+@import url(./about.css);
+
 @import url(./nhutGlobal.css);
 @import url(./general.css);
 @import url(./feature.css);

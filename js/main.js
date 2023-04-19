@@ -1,3 +1,4 @@
+
 // check
 var checkedRadio;
 var allRadios = document.getElementsByName('projects');
@@ -52,5 +53,14 @@ var x = window.matchMedia("(max-width: 768px)")
 toggleFunction(x) // Call listener function at run time
 x.addListener(toggleFunction)
 
-/* ====================================================== */
+
+
+
+ document.getElementById("showOverlay").addEventListener("click", function(){
+    document.getElementById("search").classList.add("show");
+ })
+
+ document.getElementById("close").addEventListener("click", function(){
+    document.getElementById("search").classList.remove("show");
+ })
 

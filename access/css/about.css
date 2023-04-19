@@ -1,0 +1,19 @@
+.about{
+    padding: 5rem 0;
+}
+.about-content p{
+    line-height: 25px;
+    color: var(--text-color);
+}
+.about-content .btnAbout{
+    background-color: var(--primary);
+    color: #fff;
+}
+.about-content h3{
+    font-size: 35px;
+    font-weight: 700;
+    line-height: 40px;
+    color: var(--title-color);
+    margin-bottom: 1rem;
+}
+.about-image
