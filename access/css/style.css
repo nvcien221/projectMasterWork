@@ -1,27 +1,12 @@
-@import url(./nhutGlobal.css);
-
-
-@import url(./variable.css);
-
-@import url(./reset.css);
-
-
-    /* Header  */
+@import url(.Global.css);
+/* Header  */
 @import url(./header.css);
-
-
-    /* CAROUSEL  */
+/* CAROUSEL  */
 @import url(./carousel.css);
-
-
-    /* SUPPORT  */
+/* SUPPORT  */
 @import url(./support.css);
-
-
-    /* ABOUT  */
+/* ABOUT  */
 @import url(./about.css);
-
-
 @import url(./general.css);
 @import url(./feature.css);
 @import url(./feedback.css);
