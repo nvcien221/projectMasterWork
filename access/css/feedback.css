@@ -1,0 +1,27 @@
+
+.feedback {
+    background: linear-gradient(to right, var(--bgr_color), rgba(255, 255, 255, 0.77)), url('../image/b2.jpg');
+    background-size: cover;
+    background-repeat: no-repeat, no-repeat, no-repeat;
+    background-position: center;
+    background-attachment: fixed;
+    padding-top: 3rem;
+    padding-bottom: 3rem;
+}
+
+.feedback__content {
+    padding-bottom: 3rem;
+}
+
+.feedback .feedback__carousel-item__content__img {
+    margin-left: auto;
+    margin-right: auto;
+    width: 100px;
+    height: 100px;
+    display: inline-block;
+    overflow: hidden;
+    background: #f3f6f9;
+    border-radius: 50%;
+    border: 3px solid var(--primary);
+}
+

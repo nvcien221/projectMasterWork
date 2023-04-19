@@ -1,0 +1,111 @@
+.general {
+    background-color: var(--light-bg-color);
+    padding-top: 3rem;
+    padding-bottom: 3rem;
+}
+
+.general__image {
+    position: sticky;
+    top: 80px;
+}
+
+.general__image img {
+    border-radius: var(--card-curve);
+    box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15);
+}
+
+.general__content__col--edit {
+    margin-top: 3rem;
+}
+
+.general__list ul {
+    list-style-type: none;
+}
+
+.general__list input[type="checkbox"] {
+    display: none;
+}
+
+.general__list ul li {
+    margin-bottom: 15px;
+    overflow: hidden;
+}
+
+.general__list ul li label {
+    display: block;
+    width: 100%;
+    height: 100%;
+    padding: 25px 50px 25px 20px;
+    margin-bottom: 0;
+}
+
+.general .card {
+    border-color: var(--border-color);
+    border-radius: var(--card-curve);
+}
+
+.general i {
+    position: absolute;
+    top: 20px;
+    right: 25px;
+}
+
+.general i::after {
+    content: '';
+    display: block;
+    background-color: var(--title-color);
+    width: 3px;
+    height: 9px;
+    transform: rotate(45deg);
+    transition: .3s;
+}
+
+.general i::before {
+    content: '';
+    display: block;
+    background-color: var(--title-color);
+    width: 3px;
+    height: 9px;
+    transform: translate(-5px, 9px) rotate(135deg);
+    transition: .3s;
+}
+
+.general__list__header {
+    font-size: 18px;
+    line-height: 30px;
+    display: block;
+    color: var(--title-color);
+}
+
+.general__list__text {
+    color: var(--text-color);
+    font-size: 16px;
+    line-height: 24.5px;
+    opacity: 0;
+    transform: translateY(50px);
+    max-height: 0;
+    transition: .3s;
+}
+
+.general__list input:checked+label .general__list__text {
+    opacity: 1;
+    transform: translateY(0);
+    max-height: none;
+    margin-top: 14px;
+}
+
+.general__list input:checked+label i::before {
+    transform: translate(0, 9px) rotate(135deg)
+}
+
+.general__list input:checked+label i::after {
+    transform: translate(-4px, 0) rotate(45deg);
+}
+
+
+
+@media (min-width: 768px) {
+    .general__content__col--edit:last-child {
+        padding-left: 3rem;
+    }
+}

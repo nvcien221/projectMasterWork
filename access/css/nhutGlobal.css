@@ -1,0 +1,100 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body,
+html {
+    font-family: 'Nunito', sans-serif;
+    line-height: 1.15;
+    background-color: var(--bgr_color);
+}
+
+:root {
+    --bgr_color: #fff;
+    --primary: #dc4f72;
+    --title-color: #2C3038;
+    --text-color: #5a5a5a;
+    --light-bg-color: #F7F9FC;
+    --card-curve: 6px;
+    --border-color: #eee;
+    --border-color-light: ##f8f9fa;
+}
+
+.__title {
+    text-align: center;
+    max-width: 750px;
+    margin: 0 auto;
+}
+
+.__title h3 {
+    font-size: 16px;
+    line-height: 20px;
+    font-weight: 700;
+    color: var(--primary);
+    text-transform: uppercase;
+    margin-bottom: 5px;
+}
+
+.__title h2 {
+    font-size: 32px;
+    line-height: 42px;
+    color: var(--title-color);
+    font-weight: 700;
+}
+
+.__title p {
+    color: var(--text-color);
+    font-size: 16px;
+    line-height: 22.5px;
+    font-weight: 400;
+}
+
+.container {
+    width: 100%;
+    padding-right: 15px;
+    padding-left: 15px;
+    margin-right: auto;
+    margin-left: auto;
+}
+
+@media (min-width: 576px) {
+    .container {
+        max-width: 100%;
+        padding-right: 30px;
+        padding-left: 30px;
+        margin-right: auto;
+        margin-left: auto;
+    }
+
+}
+
+@media (min-width: 576px) and (max-width: 667px) {
+    .__title h2 {
+        font-size: 32px;
+        line-height: 42px;
+    }
+}
+
+@media (min-width: 668px) and (max-width: 800px) {
+    .__title h2 {
+        font-size: 40px;
+        line-height: 50px;
+    }
+}
+
+@media (min-width: 801px) {
+
+    .__title h2 {
+        font-size: 46px;
+    }
+
+}
+
+@media (min-width: 1280px) {
+    .container {
+        max-width: 1200px;
+    }
+
+}
