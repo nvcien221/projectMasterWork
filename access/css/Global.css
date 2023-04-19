@@ -8,11 +8,11 @@ body,
 html {
     font-family: 'Nunito', sans-serif;
     line-height: 1.15;
-    background-color: var(--bgr_color);
+    background-color: var(--bgr-color);
 }
 
 :root {
-    --bgr_color: #fff;
+    --bgr-color: #fff;
     --primary: #dc4f72;
     --title-color: #2C3038;
     --text-color: #5a5a5a;
