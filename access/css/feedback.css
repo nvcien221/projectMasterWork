@@ -10,30 +10,7 @@
 
 .feedback__content {
     padding-bottom: 3rem;
-}
-
-.carouselFeedback--edit {
-    margin-top: 3rem;
-}
-
-.feedback .carousel-indicators {
-    bottom: -72px;
-}
-
-.feedback .carousel-inner .carousel-item {
-    transition: transform .2s ease-in-out;
-}
-
-.feedback .carousel-indicators .active {
-    background-color: var(--primary);
-}
-
-.feedback .carousel-indicators li {
-    width: 40px;
-    height: 5px;
-    display: block;
-    margin: 5px 5px;
-    transition: opacity .2s ease;
+    margin-top: 45px;
 }
 
 .feedback .feedback__carousel-item__content {
@@ -43,15 +20,19 @@
     margin: 0 auto;
     display: grid;
     position: relative;
+    gap: 50px;
+    padding: 2rem;
+    grid-template-columns: auto 1fr;
 }
 
 .feedback .feedback__carousel-item__content i {
     position: absolute;
-    top: 50%;
+    top: -4%;
     left: 50%;
     color: var(--title-color);
     opacity: 0.2;
-    font-size: 30px;
+    font-size: 37px;
+    transform: translateX(-50%);
 }
 
 .feedback .feedback__carousel-item__content__img {
@@ -70,6 +51,8 @@
     font-size: 18px;
     line-height: 26px;
     color: var(--title-color);
+    margin-top: 1rem;
+    position: relative;
 }
 
 .feedback .feedback__carousel-item__content__text h4 {
@@ -85,6 +68,30 @@
     line-height: 26px;
 }
 
+.feedback .owl-theme .owl-dots .owl-dot span {
+    width: 40px;
+    height: 5px;
+    margin: 5px 5px;
+    background: var(--bg-color);
+    display: block;
+    border: none;
+    transition: opacity .2s ease;
+    border-radius: 0;
+    position: relative;
+}
+
+.feedback .owl-theme .owl-dots .owl-dot.active span,
+.owl-theme .owl-dots .owl-dot:hover span {
+    background: var(--primary);
+}
+
+.feedback .owl-dots {
+    bottom: -55px;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
 @media (min-width: 100px) and (max-width: 480px) {
     .feedback .feedback__carousel-item__content {
         gap: 10px;
@@ -96,5 +103,31 @@
 @media (min-width: 100px) and (max-width: 667px) {
     .feedback .feedback__carousel-item__content__text {
         text-align: center;
+    }
+}
+
+@media (min-width: 480px) and (max-width: 667px) {
+    .feedback .feedback__carousel-item__content {
+        gap: 30px;
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (min-width: 667px) and (max-width: 900px) {
+    .feedback .feedback__carousel-item__content {
+        padding: 2rem;
+    }
+}
+
+@media (min-width: 667px) {
+    .feedback .feedback__carousel-item__content i {
+        left: -24px;
+    }
+}
+
+@media (min-width: 667px) and (max-width: 992px) {
+    .feedback .feedback__carousel-item__content__text {
+        margin-top: 1rem;
+        padding: 0;
     }
 }

@@ -56,3 +56,19 @@ function toggleFunction(x) {
 var x = window.matchMedia("(max-width: 768px)")
 toggleFunction(x) // Call listener function at run time
 x.addListener(toggleFunction)
+
+/**
+ * owl carousel
+ */
+$('.owl-carousel').owlCarousel({
+    loop:true,
+    margin:10,
+    responsive:{
+        0:{
+            items:1
+        },
+        1000: {
+            items:2
+        }
+    }
+})
