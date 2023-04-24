@@ -80,6 +80,6 @@ document.getElementById('btn-switch-theme').onclick = function () {
         document.documentElement.setAttribute('data-theme', 'dark');
         return;
     }
-    isDark = false;``
+    isDark = false;
     document.documentElement.setAttribute('data-theme', 'light');
 }
