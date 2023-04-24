@@ -37,11 +37,13 @@
     height: 100%;
     padding: 25px 50px 25px 20px;
     margin-bottom: 0;
+    
 }
 
 .general .card {
     border-color: var(--border-color);
     border-radius: var(--card-curve);
+    background-color: var(--bgr-color);
 }
 
 .general i {

@@ -26,6 +26,19 @@ html {
     --card-hover-box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.09);
 }
 
+[data-theme="dark"] {
+    --primary: #dc4f72;
+    --secondary: #0d5fa8;
+    --title-color: #eee;
+    --text-color: #b7b7b7;
+    --border-color: #333;
+    --bg-lightgrey: #191c1d;
+    --border-color-light: #333;
+    --bgr-color: #131617;
+    --iframe-filter: grayscale(100%);
+    --light-bg-color: #191c1d;
+}
+
 .__title {
     text-align: center;
     max-width: 750px;

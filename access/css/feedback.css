@@ -11,6 +11,8 @@
 .feedback__content {
     padding-bottom: 3rem;
     margin-top: 45px;
+    max-width: 1200px;
+    margin: auto;
 }
 
 .feedback .feedback__carousel-item__content {
@@ -72,7 +74,7 @@
     width: 40px;
     height: 5px;
     margin: 5px 5px;
-    background: var(--bg-color);
+    background: var(--bgr-color);
     display: block;
     border: none;
     transition: opacity .2s ease;

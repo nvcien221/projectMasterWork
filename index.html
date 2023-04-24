@@ -25,7 +25,7 @@
     <title>MasterWork</title>
 </head>
 
-<body style="height: 5000px">
+<body>
     <header class="main-header fixed-top">
         <div class="container">
             <nav class="navbar navbar-expand-lg navbar-light">
@@ -560,7 +560,7 @@
     <footer>
         <div class="container">
             <div class="row">
-                <div class="col-12">
+                <div class="col-12 col-md-4 col-lg-2">
                     <div class="footer-item">
                         <h3>Meta</h3>
                         <ul>
@@ -571,7 +571,7 @@
                         </ul>
                     </div>
                 </div>
-                <div class="col-12">
+                <div class="col-12 col-md-4 col-lg-2">
                     <div class="footer-item">
                         <h3>Categories</h3>
                         <ul>
@@ -582,7 +582,7 @@
                         </ul>
                     </div>
                 </div>
-                <div class="col-12">
+                <div class="col-12 col-md-4 col-lg-2">
                     <div class="footer-item">
                         <h3>Archives</h3>
                         <ul>
@@ -590,28 +590,30 @@
                         </ul>
                     </div>
                 </div>
-                <div class="col-12">
-                    <div class="footer-last-item">
+                <div class="col-12 col-lg-6">
+                    <div class="footer-lasted-item">
                         <h3>Newsletter</h3>
-                        <p>Get latest updates and offers.</p>
-                        <form class="form-inline">
-                            <div class="form-group mx-sm-3 mb-2">
-                                <input type="email" class="form-control" placeholder="Email Address">
-                            </div>
-                            <button type="submit" class="btn btn-primary mb-2">Go</button>
-                        </form>
-                        <p>Sign up for our latest news & articles. We won’t give you spam mails.</p>
+                        <div class="footer__box">
+                            <p>Get latest updates and offers.</p>
+                            <form class="form-inline">
+                                <div class="form-group">
+                                    <input type="email" class="form-control" placeholder="Email Address">
+                                </div>
+                                <button type="submit" class="btn btn-primary">Go</button>
+                            </form>
+                            <p>Sign up for our latest news & articles. We won’t give you spam mails.</p>
+                        </div>
                     </div>
                 </div>
             </div>
-            <div class="below-section">
+            <div class="pt-4 mt-5 below-section">
                 <div class="columns text-lg-left text-center">
                     <p class="copyrights">
                         © 2023 Masterwork. All Rights Reserved | WordPress Theme by
-                        <a href="#">W3Layouts.</a>
+                        <a class="copyrights-link" href="#">W3Layouts.</a>
                     </p>
                 </div>
-                <div class="columns-2 mt-lg-0 mt-3">
+                <div class="columns-2">
                     <ul class="social">
                         <li><a href="#"><i class="fa-brands fa-facebook-f"></i></a></li>
                         <li><a href="#"><i class="fa-brands fa-linkedin-in"></i></a></li>
@@ -623,6 +625,8 @@
             </div>
         </div>
     </footer>
+
+    <button id="btn-switch-theme"> dark theme</button>
     <!--=======  End of Footer  ========-->
     <!-- jquery -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.4/jquery.min.js"
