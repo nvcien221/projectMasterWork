@@ -37,7 +37,6 @@
     height: 100%;
     padding: 25px 50px 25px 20px;
     margin-bottom: 0;
-    
 }
 
 .general .card {
@@ -103,8 +102,6 @@
 .general__list input:checked+label i::after {
     transform: translate(-4px, 0) rotate(45deg);
 }
-
-
 
 @media (min-width: 768px) {
     .general__content__col--edit:last-child {

@@ -77,8 +77,7 @@ var isDark = false;
 document.getElementById('moon').onclick = function () {
     switchDarkTheme();
 }
-
-function switchDarkTheme () {
+function switchDarkTheme() {
     if (localStorage.dark != 'y') {
         localStorage.setItem("dark", "y");
         document.documentElement.setAttribute('data-theme', 'dark');
