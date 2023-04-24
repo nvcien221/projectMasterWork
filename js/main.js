@@ -71,15 +71,19 @@ $('.owl-carousel').owlCarousel({
 })
 /**
  * chuyển đổi theme cho trang web
- * @isDark {boolean}: biến lưu giá trị cho biết hiện tại trang web đang hiển thị dark mode hay light mode. true là dark mode, false là light mode
+ * @localStorage.lastname {string}: biến lưu giá trị cho biết hiện tại trang web đang hiển thị dark mode hay light mode. y là dark mode, không phải y là light mode
  */
 var isDark = false;
-document.getElementById('btn-switch-theme').onclick = function () {
-    if (!isDark) {
-        isDark = true
+document.getElementById('moon').onclick = function () {
+    switchDarkTheme();
+}
+
+function switchDarkTheme () {
+    if (localStorage.dark != 'y') {
+        localStorage.setItem("dark", "y");
         document.documentElement.setAttribute('data-theme', 'dark');
         return;
     }
-    isDark = false;
+    localStorage.setItem("dark", "n");
     document.documentElement.setAttribute('data-theme', 'light');
 }
