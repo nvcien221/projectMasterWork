@@ -1,0 +1,61 @@
+@media (min-width: 1280px){
+    .container {
+        max-width: 1200px;
+    }
+}
+.sologan-box{
+    background: linear-gradient(to right,
+    rgba(0, 0, 0, 0.7),
+    rgba(0, 0, 0, 0.33)), 
+    url(../image/bg.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-attachment: fixed;
+    padding: 32px 0;
+    min-height: 480px;
+    display: grid;
+    align-items: center;
+    color: #fff;
+}
+.sologan-content{
+    max-width: 550px;
+}
+.sologan-content h2{
+    font-size: 30px;
+    line-height: 36px;
+    font-weight: 700;
+}
+.sologan-content p{
+    font-size: 15px;
+    color: #eee;
+    line-height: 22px;
+    margin: 16px 0 24px;
+    
+}
+@media (min-width: 667px){
+    .sologan-content p{
+       font-size: 16px;
+       line-height: 24.5px;
+    }
+}
+@media (min-width: 768px){
+    .sologan-content p{
+        margin: 24px 0 48px;
+    }
+}
+.btnSologan{
+    color: #212529;
+    background-color: #f8f9fa;
+    border-color: #f8f9fa;
+}
+.btnSologan:hover{
+    background-color: #e2e6ea;
+    border-color: #dae0e5;
+}
+.btnSologan:focus{
+    color: #212529;
+    background-color: #e2e6ea;
+    border-color: #dae0e5;
+    box-shadow: 0 0 0 0.2rem rgba(216, 217, 219, 0.5);
+}
