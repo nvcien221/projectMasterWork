@@ -185,6 +185,9 @@ button.navbar-toggler.collapsed .icon-expand{
     top: 8px;
     left: 2px;
 }
+.gg-moon:hover{
+    cursor: pointer;
+}
 .navbar-collapse{
     padding: 20px 0;
 }
@@ -280,7 +283,7 @@ button.navbar-toggler.collapsed .icon-expand{
     opacity: 1;
 }
 .show{
-    display: block; !important
+    display: block !important;
 }
 
 .search-right .popup {

@@ -42,6 +42,7 @@
 .general .card {
     border-color: var(--border-color);
     border-radius: var(--card-curve);
+    background-color: var(--bgr-color);
 }
 
 .general i {
@@ -101,8 +102,6 @@
 .general__list input:checked+label i::after {
     transform: translate(-4px, 0) rotate(45deg);
 }
-
-
 
 @media (min-width: 768px) {
     .general__content__col--edit:last-child {

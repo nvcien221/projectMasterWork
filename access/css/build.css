@@ -1,0 +1,42 @@
+.build {
+    padding-top: 3rem;
+    padding-bottom: 3rem;
+}
+
+.build .buttons {
+    margin-top: 3rem;
+    text-align: center;
+}
+
+.build .theme-button {
+    transition: all .5s;
+    display: inline-block;
+    line-height: 52px;
+    font-weight: 700;
+    font-size: 14px;
+    margin: 0px;
+    padding: 0px 30px;
+    text-transform: uppercase;
+}
+
+.build .theme-button:first-child {
+    margin-bottom: 10px;
+}
+
+.build .btn-primary {
+    color: #fff;
+    background-color: #dc4f72;
+    border-color: #dc4f72;
+    box-shadow: none;
+}
+
+@media (min-width:331px) {
+    .build .theme-button:first-child {
+        margin-bottom: 0;
+        margin-right: 0.5rem;
+    } 
+
+    .build .theme-button:last-child {
+        margin-left: 0.5rem;
+    } 
+}

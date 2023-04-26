@@ -5,8 +5,6 @@ document.getElementById("showOverlay").addEventListener("click", function () {
 document.getElementById("close").addEventListener("click", function () {
     document.getElementById("search").classList.remove("show");
 })
-
-
 /**
  * Công Nhựt
  */
@@ -56,3 +54,35 @@ function toggleFunction(x) {
 var x = window.matchMedia("(max-width: 768px)")
 toggleFunction(x) // Call listener function at run time
 x.addListener(toggleFunction)
+/**
+ * owl carousel
+ */
+$('.owl-carousel').owlCarousel({
+    loop: true,
+    margin: 10,
+    responsive: {
+        0: {
+            items: 1
+        },
+        1000: {
+            items: 2
+        }
+    }
+})
+/**
+ * chuyển đổi theme cho trang web
+ * @localStorage.lastname {string}: biến lưu giá trị cho biết hiện tại trang web đang hiển thị dark mode hay light mode. y là dark mode, không phải y là light mode
+ */
+var isDark = false;
+document.getElementById('moon').onclick = function () {
+    switchDarkTheme();
+}
+function switchDarkTheme() {
+    if (localStorage.dark != 'y') {
+        localStorage.setItem("dark", "y");
+        document.documentElement.setAttribute('data-theme', 'dark');
+        return;
+    }
+    localStorage.setItem("dark", "n");
+    document.documentElement.setAttribute('data-theme', 'light');
+}
