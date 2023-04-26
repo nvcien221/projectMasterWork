@@ -16,4 +16,26 @@
     color: var(--title-color);
     margin-bottom: 1rem;
 }
-.about-image
+.about-box-img{
+    margin-top: 48px;
+}
+@media (min-width: 576px){
+    .about-box-img{
+        margin-top: 0;
+        padding-left: 48px;
+    }
+    .about-content{
+        padding-right: 48px;
+    }
+}
+.about-image{
+    width: 100%;
+    height: auto;
+    border-radius: 6px;
+    transition: 0.3s ease-in-out;
+    box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15);
+}
+.about-image:hover{
+    transform: translateY(-8px);
+    transition: 0.3s ease-in-out;
+}
