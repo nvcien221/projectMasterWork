@@ -1,0 +1,22 @@
+.number{
+    padding: 24px 0 48px;
+}
+.number-item{
+    padding: 32px;
+    background-color: #fff;
+    box-shadow: var(--card-box-shadow);
+}
+.number-item:hover{
+    box-shadow: var(--card-hover-box-shadow);
+    transition: 0.3s ease;
+}
+.number-item h4{
+    font-size: 17px;
+}
+.number-item .number-counter{
+    font-size: 40px;
+    font-weight: 700;
+    color: var(--primary);
+    line-height: 50px;
+    margin: 10px 0 15px;
+}
