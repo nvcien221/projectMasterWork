@@ -283,7 +283,7 @@ button.navbar-toggler.collapsed .icon-expand{
     opacity: 1;
 }
 .show{
-    display: block; !important
+    display: block !important;
 }
 
 .search-right .popup {
