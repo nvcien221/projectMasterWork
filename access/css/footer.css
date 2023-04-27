@@ -58,6 +58,9 @@ footer .footer__box input[type="email"] {
     font-weight: 600;
     border-radius: var(--card-curve);
 }
+footer .form-control:focus {
+    box-shadow: none;
+}
 footer .footer__box button {
     width: 20%;
     text-align: center;
@@ -69,6 +72,18 @@ footer .footer__box button {
     cursor: pointer;
     color: #fff;
     border-radius: var(--card-curve);
+}
+footer .btn-primary:not(:disabled):not(.disabled).active:focus, .btn-primary:not(:disabled):not(.disabled):active:focus, .show>.btn-primary.dropdown-toggle:focus {
+    box-shadow: 0 0 0 0.2rem rgba(220, 79, 114, 0.5);
+}
+footer .btn-primary:hover {
+    background-color: #dc4f72;
+    border-color: #dc4f72;
+}
+footer .btn-primary.focus, .btn-primary:focus {
+    box-shadow: 0 0 0 0.2rem rgba(220, 79, 114, 0.5);
+    background-color: #dc4f72;
+    border-color: #dc4f72;
 }
 footer ul li {
     display: block;
