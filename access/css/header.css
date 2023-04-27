@@ -1,27 +1,32 @@
 /* Header  */
 .main-header{
-    height: auto;
+    min-height: 60px;
     padding: 15px 0;
     background-color: var(--bgr-color);
     padding: 0px;
-    transition: all 0.4s ease 0s;
+    transition: all .4s ease;
     display: grid;
     align-items: center;
     box-shadow: 0 3px 9px rgba(0, 0, 0, 0.05);
     color: #2C3038; 
 }
-@media only screen and (max-width: 991px){
-    header.nav-fixed {
-        height: auto;
-        padding: 10px 0;
+@media (min-width: 992px){
+    .main-header{
+        min-height: 60px;
     }
 }
 .fixed-top {
     position: fixed;
+    padding: 15px 0;
     top: 0;
     right: 0;
     left: 0;
     z-index: 1030;
+}
+.nav-fixed{
+    padding: 10px 0;
+    height: auto;
+
 }
 @media (min-width: 576px){
     .container{
@@ -46,11 +51,11 @@
     }
 }
 .main-header .navbar{
-    padding: 15px 0;
     justify-content: space-between;
     position: relative;
     display: flex;
     align-items: center;
+    padding: 0;
 }
 .navbar .navbar-brand{
     margin: 0;
@@ -79,8 +84,13 @@
 .nav-itemDropdown .dropdown-menu .dropdown-item, .nav-item{
     position: relative;
 }
-.navbar-nav .nav-link:hover::before, .dropdown-item:hover::before{
+.navbar-nav .nav-item .nav-link:hover::before, .dropdown-item:hover::before{
     width: 20px;
+}
+
+.navbar-light .navbar-nav .nav-link:hover,
+.dropdown-menu .dropdown-item:hover, .nav-link:hover.dropdown-toggle::after{
+    color: var(--primary);
 }
 .nav-itemDropdown{
     position: relative;
@@ -94,12 +104,19 @@
     content: "\f107";
     font: normal normal normal 14px/1 FontAwesome;
     font-size: inherit;
-    color: #2C3038;
+    color: var(--title-color);
     border: none;
     opacity: 0.8;
 }
+.nav-itemDropdown:focus-visible .dropdown-toggle::after{
+    color: var(--primary);
+}
+.dropdown-menu{
+    background-color: var(--bgr-color);
+}
 .dropdown-item:hover{
-    background-color: #fff;
+    color: var(--primary);
+
 }
 
 @media (min-width: 992px){
@@ -115,7 +132,8 @@
     padding: 14px 0;
     font-size: 16px;
     font-weight: 400;
-    color: var(--text-color);
+    color: var(--title-color);
+    opacity: 0.95;
 }
 .navbar-toggler .fa-solid{
     font-size: 24px;
@@ -144,10 +162,19 @@ button.navbar-toggler.collapsed .icon-expand{
     background-color: var(--primary);
     border-radius: 5px;
 }
+.navbar-toggler .fa-solid{
+    transform: translateY(1px);
+}
 @media (min-width: 992px){
     .navbar-light .navbar-toggler{
         display: none;
     }
+}
+.showDarkandLight, .show{
+    display: block;
+}
+.closeDarkandLight, .close{
+    display: none;
 }
 
 .DarkandLight{
@@ -160,11 +187,51 @@ button.navbar-toggler.collapsed .icon-expand{
     top: 18px;
 }
 }
-.gg-moon{
-    margin-top: 8px;
-    margin-right: 24px;
+.gg-sun{
+    box-sizing: border-box;
+    width: 24px;
+    color: var(--title-color);
     position: relative;
+    height: 24px;
+    background: linear-gradient(180deg, currentColor 4px, transparent 0) no-repeat 5px -6px/2px 6px, linear-gradient(180deg, currentColor 4px, transparent 0) no-repeat 5px 14px/2px 6px, linear-gradient(180deg, currentColor 4px, transparent 0) no-repeat -8px 5px/6px 2px, linear-gradient(180deg, currentColor 4px, transparent 0) no-repeat 14px 5px/6px 2px;
+    border-radius: 100px;
+    box-shadow: inset 0 0 0 2px;
+    border: 6px solid transparent;
+    top: -6px;
+    right: 17px;
+}
+@media(min-width:992px){
+    .gg-sun{
+        top: 6px;
+        left: -2px;
+    }
+}
+.gg-sun:before {
+    transform: rotate(-45deg);
+}
+.gg-sun:after {
+    transform: rotate(45deg);
+}
+.gg-sun:before, .gg-sun::after {
+    content: " ";
+    position: absolute;
+    height: 2px;
+    border-right: 4px solid;
+    border-left: 4px solid;
+    left: -6px;
+    top: 5px;
+    box-sizing: border-box;
     display: block;
+    width: 24px;
+    color: var(--title-color);
+}
+
+
+.gg-moon{
+    position: relative;
+    margin-left: 1px;
+    top: -6px;
+    right: 17px;
     width: 20px;
     height: 20px;
     border: 2px solid;
@@ -172,6 +239,13 @@ button.navbar-toggler.collapsed .icon-expand{
     overflow: hidden;
     border-bottom: 2px solid transparent;
     transform: rotate(-135deg);
+}
+@media (min-width: 992px){
+    .gg-moon{
+        margin-left: 4px;
+        top: 5px;
+        right: 2px;
+    }
 }
 .gg-moon::after{
     content: " ";
@@ -188,9 +262,9 @@ button.navbar-toggler.collapsed .icon-expand{
 .gg-moon:hover{
     cursor: pointer;
 }
-.navbar-collapse{
+/* .navbar-collapse{
     padding: 20px 0;
-}
+} */
 .nav-item{
     display: block;
     text-align: center;
@@ -207,6 +281,7 @@ button.navbar-toggler.collapsed .icon-expand{
 }
 .nav-item .dropdown-menu{
     position: relative;
+    background-color: var(--bgr-color);
 }
 .dropdown-menu::before{
     content:" ";
@@ -230,6 +305,9 @@ button.navbar-toggler.collapsed .icon-expand{
     position: relative;
     padding-top: 0;
     padding-bottom: 14px;
+}
+.dropdown-item:hover{
+    background-color: var(--bgr-color);
 }
 
 .search-right{
@@ -263,23 +341,23 @@ button.navbar-toggler.collapsed .icon-expand{
     right: 0;
     height: 100%;
     width: 100%;
-    opacity: 0.75;
+    opacity: 0.97;
     z-index: 99;
-    background: black;
+    background: #000000ba;
     box-shadow: 1px 1px 4px 0 rgba(0, 0, 0, 0.1);
     display: none;
 }
-.search-right .popup .close {
+.search-right .popup .closeInterface {
     position: absolute;
     right: 20px;
     top: -50px;
-    transition: all 200ms;
+    transition: all 0.2s;
     font-size: 30px;
     text-decoration: none;
     color: #fff;
     opacity: 0.7;
 }
-.search-right .popup .close:hover{
+.search-right .popup .closeInterface:hover{
     opacity: 1;
 }
 .show{
@@ -293,6 +371,9 @@ button.navbar-toggler.collapsed .icon-expand{
     top: 50%;
     max-width: 600px;
 }
+.popup form{
+    opacity: 1;
+}
 @media (min-width: 576px){
 .d-sm-flex {
     display: flex !important;
@@ -302,7 +383,7 @@ button.navbar-toggler.collapsed .icon-expand{
     width: 100%;
     font-size: 16px;
     line-height: 25px;
-    background: var(--bg-color);
+    background: var(--bgr-color);
     color: var(--text-color);
     border: 1px solid var(--border-color);
     border-bottom-left-radius: 6px;
@@ -329,7 +410,7 @@ button.navbar-toggler.collapsed .icon-expand{
     transition: all 0.5s;
 }
 .search-right .popup form button:hover {
-    opacity: .8;
+    opacity: 1;
 }
 
 .HeaderButton{

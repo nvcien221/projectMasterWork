@@ -26,7 +26,7 @@
 </head>
 
 <body>
-    <header class="main-header fixed-top nav-fixed">
+    <header class="main-header fixed-top">
         <div class="container">
             <nav class="navbar navbar-expand-lg navbar-light">
                 <a class="navbar-brand" href="#">
@@ -37,9 +37,8 @@
                     data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
                     aria-label="Toggle navigation">
                     <!-- <span class="navbar-toggler-icon"></span> -->
-                    <span class="navbar-toggle-icon fa-solid fa-bars icon-expand"></span>
-                    <!-- <span class="fa-solid fa-rectangle-xmark"></span> -->
-                    <!-- <span class="fa-solid fa-square-xmark"></span> -->
+                    <span id="showListNavbar" class="navbar-toggle-icon fa-solid fa-bars icon-expand show"></span>
+                    <span id="closeListNavbar" class="navbar-toggle-icon fa-solid fa-xmark close"></span>
                 </button>
                 <div class="collapse navbar-collapse" id="navbarSupportedContent">
                     <ul class="navbar-nav ml-auto">
@@ -54,7 +53,7 @@
                         </li>
                         <li class="nav-item dropdown nav-itemDropdown">
                             <a class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown"
-                                aria-expanded="false" style="color: #5a5a5a;">
+                                aria-expanded="false">
                                 Pages
                             </a>
                             <div class="dropdown-menu">
@@ -64,7 +63,7 @@
                             </div>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="#" style="color: #5a5a5a;">Contact</a>
+                            <a class="nav-link" href="#">Contact</a>
                         </li>
                     </ul>
                     <div class="search-right">
@@ -77,7 +76,7 @@
                                     <input type="search" name="" id="" placeholder="Enter Keyword">
                                     <button type="submit">Search</button>
                                 </form>
-                                <a href="#close" class="close" id="close">x</a>
+                                <a href="#close" class="closeInterface" id="closeOverlay">x</a>
                             </div>
                         </div>
                     </div>
@@ -88,10 +87,11 @@
                     </div>
                 </div>
                 <div class="DarkandLight DarkandLight-mobile">
-                    <div class="mode-container">
-                        <!-- <i class="fa-solid fa-sun-bright"></i> -->
-                        <i id="moon" class="gg-moon"></i>
-                    </div>
+                    <!-- <input type="checkbox" id="toggle"> -->
+                    <label class="mode-container">
+                        <i id="sun" class="gg-sun closeDarkandLight"></i> 
+                        <i id="moon" class="gg-moon showDarkandLight"></i>
+                    </label>
                 </div>
             </nav>
         </div>
@@ -673,6 +673,12 @@
             </div>
         </div>
     </footer>
+
+    <!-- BACK TO TOP  -->
+    <a href="#" class="backtotop cd-top text-replace js-cd-top">
+      <i class="fa-solid fa-angle-up fa-2xs"></i>
+    </a>
+
     <!--=======  End of Footer  ========-->
     <!-- jquery -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.4/jquery.min.js"
@@ -688,9 +694,29 @@
     <!-- JQUERY  -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/waypoints/4.0.1/jquery.waypoints.js"></script>
     <script src="/js/jquery.countup.js"></script>
+
+    <!-- CROL HEADER  -->
+    <script>
+        $(document).ready(function(){
+            $(window).scroll(function(){
+                if($(this).scrollTop()){
+                    $('header').addClass('nav-fixed');
+                }
+                else{
+                    $('header').removeClass('nav-fixed');
+                }
+            })
+        })
+    </script>
+
+
     <script>
         $('.counter').countUp();
     </script>
+
+    <script src="./js/util.js"></script>
+    <script src="./js/backToTopmain.js"></script>
+
     <!-- main js -->
     <script src="./js/main.js"></script>
 </body>

@@ -11,7 +11,7 @@
 }
 .support-header h3{
     font-size: 40px;
-    color: var(--text-color);
+    color: var(--title-color);
     font-weight: 700;
     line-height: 50px;
 }

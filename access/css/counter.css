@@ -3,8 +3,10 @@
 }
 .number-item{
     padding: 32px;
-    background-color: #fff;
+    background-color: var(--bgr-color);
     box-shadow: var(--card-box-shadow);
+    border: 1px solid var(--border-color-light);
+    border-radius:  6px;
 }
 .number-item:hover{
     box-shadow: var(--card-hover-box-shadow);
@@ -12,6 +14,20 @@
 }
 .number-item h4{
     font-size: 17px;
+    line-height: 24.5px;
+    text-transform: capitalize;
+    color: var(--title-color);
+    font-weight: 700;
+}
+@media (min-width: 738px){
+    .number-item h4{
+        font-size: 18px;
+    }
+}
+@media (min-width: 992px){
+    .number-item h4{
+        font-size: 16px;
+    }
 }
 .number-item .number-counter{
     font-size: 40px;
@@ -19,4 +35,7 @@
     color: var(--primary);
     line-height: 50px;
     margin: 10px 0 15px;
+}
+.number-item p{
+    color: var(--text-color);
 }
