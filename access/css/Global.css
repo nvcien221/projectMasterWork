@@ -3,14 +3,12 @@
     padding: 0;
     box-sizing: border-box;
 }
-
 body,
 html {
     font-family: 'Nunito', sans-serif;
     line-height: 1.15;
     background-color: var(--bgr-color);
 }
-
 :root {
     --bgr-color: #fff;
     --primary: #dc4f72;
