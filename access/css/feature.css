@@ -111,6 +111,7 @@
     line-height: 44px;
     padding: 0px 20px;
     margin-top: 1rem;
+    margin-bottom: 3px;
 }
 
 .featured__content .featured__tabs div .btn-outline-primary:not(:disabled):not(.disabled).active,
